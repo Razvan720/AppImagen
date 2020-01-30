@@ -1,0 +1,18 @@
+.cont-usuarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "id nombre foto";
+}
+
+.cont-id {
+    grid-area: id;
+}
+
+.cont-nombre {
+    grid-area: nombre;
+}
+
+.cont-foto {
+    grid-area: foto;
+}
