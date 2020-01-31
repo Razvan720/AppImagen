@@ -1,11 +1,27 @@
-<div *ngFor="let user of usuarios" class="cont-usuarios">
-    <div class="cont-id">
-        {{ user.id }}
+<div class="general">
+
+
+    <div class="cont-usuarios">
+        <div class="cont-id">
+            <h2>id</h2>
+        </div>
+        <div class="cont-nombre">
+            <h2>Nombre</h2>
+        </div>
+        <div class="cont-foto">
+            <h2>Foto</h2>
+        </div>
     </div>
-    <div class="cont-nombre">
-        {{ user.nombre }}
-    </div>
-    <div class="cont-foto">
-        {{ user.foto }}
+
+    <div *ngFor="let user of usuarios" class="cont-usuarios">
+        <div class="cont-id">
+            {{ user.id }}
+        </div>
+        <div class="cont-nombre">
+            {{ user.nombre }}
+        </div>
+        <div class="cont-foto">
+            {{ user.foto }}
+        </div>
     </div>
 </div>
