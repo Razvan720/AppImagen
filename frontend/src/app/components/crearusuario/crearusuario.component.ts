@@ -34,7 +34,7 @@ export class CrearusuarioComponent implements OnInit {
   }
 
   get nombre() {
-    return this.formUser.get("nomb");
+    return this.formUser.get("nombre");
   }
 
   get foto() {
