@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LeerusuariosComponent } from './components/leerusuarios/leerusuarios.component';
 import { CrearusuarioComponent } from './components/crearusuario/crearusuario.component';
+import { LoginComponent } from './components/login/login.component';
+import { ParteprivadaComponent } from './components/parteprivada/parteprivada.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: 'crearusuarios',
     component: CrearusuarioComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'parteprivada',
+    component: ParteprivadaComponent,
   },
 ];
 

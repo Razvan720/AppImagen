@@ -1,27 +1,29 @@
-<div class="general">
-
-
-    <div class="cont-usuarios">
-        <div class="cont-id">
-            <h2>id</h2>
+<div class="contendor-leerusuarios">
+    <div class="cont-tabla">
+        <h1 class="titulo">Leer usuarios</h1>
+        <div class="filanecabezados">
+            <div class="tid">
+                id
+            </div>
+            <div class="tnombre">
+                Nombre
+            </div>
+            <div class="timagen">
+                Foto
+            </div>
         </div>
-        <div class="cont-nombre">
-            <h2>Nombre</h2>
-        </div>
-        <div class="cont-foto">
-            <h2>Foto</h2>
-        </div>
-    </div>
-
-    <div *ngFor="let user of usuarios" class="cont-usuarios">
-        <div class="cont-id">
-            {{ user.id }}
-        </div>
-        <div class="cont-nombre">
-            {{ user.nombre }}
-        </div>
-        <div class="cont-foto">
-            {{ user.foto }}
+        <div class="filadatos">
+            <div *ngFor="let user of usuarios" class="datosusuarios">
+                <div>
+                    {{ user.id }}
+                </div>
+                <div>
+                    {{ user.nombre }}
+                </div>
+                <div>
+                    {{ user.foto }}
+                </div>
+            </div>
         </div>
     </div>
 </div>

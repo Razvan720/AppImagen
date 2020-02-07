@@ -32,4 +32,18 @@ export class MimodeloService {
   updateUsuarios(id: String, usuario: Mimodelo): Observable<any> {
     return this.http.put('http://localhost:3000/usuarios/${id}', usuario);
   }
+
+  getLogin(usuario: Mimodelo): Observable<any> {
+    return this.http.post('http://localhost:3000/usuarios/login/', usuario);
+  }
+
+  //Parte de comprobar login
+  logIn(){
+    return !! localStorage.getItem('token');
+  }
+
+  logOut(){
+    localStorage.removeItem('token');
+  }
+
 }

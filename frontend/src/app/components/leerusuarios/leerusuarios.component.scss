@@ -1,27 +1,48 @@
-.general {
-    width: 100%;
-    height: 100%;
+.contendor-leerusuarios {
+    display: grid;
+    justify-items: center;
 }
 
-.cont-usuarios {
+.cont-tabla {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 12fr;
+    grid-template-areas: "titulo" "filanecabezados" "datosusuarios";
+}
+
+.titulo {
+    grid-area: titulo;
+    background-color: rgba($color: #007981, $alpha: 1.0);
+    color: white;
+}
+
+.filanecabezados {
+    grid-area: filanecabezados;
     display: grid;
     grid-template-columns: 1fr 5fr 5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "id nombre foto";
-    grid-auto-rows: auto;
-    justify-self: center;
-    width: 50%;
+    grid-template-areas: "tid tnombre timagen";
+}
+
+.tid {
+    grid-area: tid;
+}
+
+.tnombre {
+    grid-area: tnombre;
+}
+
+.timagen {
+    grid-area: timagen;
+}
+
+.datosusuarios {
+    grid-area: datosusuarios;
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr;
+    grid-auto-rows: auto; //Esto pone las filas automaticamente sean las que sean
     background-color: rgba($color: #00d192, $alpha: 0.5);
 }
 
-.cont-id {
-    grid-area: id;
-}
-
-.cont-nombre {
-    grid-area: nombre;
-}
-
-.cont-foto {
-    grid-area: foto;
+.filadatos>div:nth-child(odd) {
+    background-color: rgba($color: #29568a, $alpha: 1.0);
 }
