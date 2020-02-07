@@ -5,6 +5,7 @@ import { LeerusuariosComponent } from './components/leerusuarios/leerusuarios.co
 import { CrearusuarioComponent } from './components/crearusuario/crearusuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { ParteprivadaComponent } from './components/parteprivada/parteprivada.component';
+import { GLoginUserGuard } from './services/g-login-user.guard';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   {
     path: 'parteprivada',
     component: ParteprivadaComponent,
+    canActivate:[GLoginUserGuard]
   },
 ];
 
