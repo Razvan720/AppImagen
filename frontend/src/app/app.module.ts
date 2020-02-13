@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 
 
@@ -13,7 +14,11 @@ import { LeerusuariosComponent } from './components/leerusuarios/leerusuarios.co
 import { CrearusuarioComponent } from './components/crearusuario/crearusuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { ParteprivadaComponent } from './components/parteprivada/parteprivada.component';
-import { from } from 'rxjs';
+import { GLoginUserGuard } from './services/g-login-user.guard';
+import { CompruebatokenService } from './services/compruebatoken.service';
+import { MimodeloService } from './services/mimodelo.service';
+
+
 
 
 @NgModule({
@@ -24,7 +29,9 @@ import { from } from 'rxjs';
     LeerusuariosComponent,
     CrearusuarioComponent,
     LoginComponent,
-    ParteprivadaComponent
+    ParteprivadaComponent,
+    
+    
 
   ],
   imports: [
@@ -32,9 +39,16 @@ import { from } from 'rxjs';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-   
+
   ],
-  providers: [],
+  providers: [
+    GLoginUserGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CompruebatokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

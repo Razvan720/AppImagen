@@ -46,4 +46,8 @@ export class MimodeloService {
     localStorage.removeItem('token');
   }
 
+  getToken(){
+    return localStorage.getItem('token');
+  }
+
 }

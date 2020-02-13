@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MimodeloService } from '../../services/mimodelo.service';
 
 @Component({
   selector: 'app-barranavegacion',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarranavegacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mimodeloservice: MimodeloService) { }
 
   ngOnInit() {
   }

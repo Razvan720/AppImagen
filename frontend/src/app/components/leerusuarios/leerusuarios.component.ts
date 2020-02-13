@@ -9,9 +9,9 @@ import { Mimodelo } from 'src/app/modelo/mimodelo';
 })
 export class LeerusuariosComponent implements OnInit {
 
-  private usuarios: Mimodelo;
+  public usuarios: Mimodelo;
 
-  constructor(private mimodeloService:MimodeloService) { }
+  constructor(public mimodeloService:MimodeloService) { }
 
   ngOnInit() {
     this.mimodeloService.getUsuarios().subscribe(

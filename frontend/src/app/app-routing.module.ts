@@ -21,20 +21,22 @@ const routes: Routes = [
   {
     path: 'leerusuarios',
     component: LeerusuariosComponent,
+    canActivate:[GLoginUserGuard]
   },
   {
     path: 'crearusuarios',
     component: CrearusuarioComponent,
+    canActivate:[GLoginUserGuard]
   },
   {
     path: 'login',
     component: LoginComponent,
   },
-  {
+  /*{
     path: 'parteprivada',
     component: ParteprivadaComponent,
-    canActivate:[GLoginUserGuard]
-  },
+    
+  },*/
 ];
 
 @NgModule({
